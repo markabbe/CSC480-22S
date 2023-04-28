@@ -12,6 +12,7 @@ import axios from 'axios';
 import NavigationContainerComponent from "../../components/NavigationComponents/NavigationContainerComponent";
 import HeaderBar from "../../components/HeaderBar/HeaderBar";
 import bulkDownloadLogo from "../../assets/icons/navigation/default/Bulk Download.svg";
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 Chart.register(LineElement);
 Chart.register(PointElement);
@@ -345,6 +346,9 @@ function ProfessorGradesPage() {
             <div className='admin-container'>
                 <NavigationContainerComponent />
                 <div className='professor-user-roles'>
+                    <div className='grades-overview-breadcrumbs'>
+                        <Breadcrumbs></Breadcrumbs>
+                    </div>
                     <h2>Grades Overview for {course}</h2>
                     <div className='admin-tabs'>
                         <button className='user-roles-tab' onClick={() => changePage('roles')} style={{
